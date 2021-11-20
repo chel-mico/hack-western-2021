@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <h1>Hello, world!</h1>
         <Header />
         <div className={styles.content}>
           <Ingredients />

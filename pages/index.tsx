@@ -9,7 +9,7 @@ import Ingredients from './components/Ingredients';
 import Recipes from './components/Recipes';
 
 const Home: NextPage = () => {
-  const ingredients = React.useState<String[]>([]);
+  const [savedIngredients, setIngredients] = React.useState<string[]>(["apple", "banana"]);
   const searchQuery = React.useState("");
 
   return (
@@ -24,7 +24,10 @@ const Home: NextPage = () => {
         <h1>Hello, world!</h1>
         <Header />
         <div className={styles.content}>
-          <Ingredients />
+          <Ingredients
+            savedIngredients={savedIngredients}
+            setIngredients={setIngredients}
+          />
           <Recipes />
         </div>
       </main>

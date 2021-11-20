@@ -4,6 +4,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import Header from './components/Header';
+import Ingredients from './components/Ingredients';
+import Recipes from './components/Recipes';
+
 const Home: NextPage = () => {
   const ingredients = React.useState<String[]>([]);
   const searchQuery = React.useState("");
@@ -19,8 +23,8 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Header />
         <div className={styles.content}>
-          <IngredientList />
-          <RecipeGrid />
+          <Ingredients />
+          <Recipes />
         </div>
       </main>
 
